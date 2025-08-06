@@ -1,11 +1,17 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
+// ignore: depend_on_referenced_packages
 import 'package:http/http.dart' as http;
-import 'package:moaazapp/constants/base_url.dart';
+import 'package:moaazapp/core/constants/base_url.dart';
 import 'package:moaazapp/models/user_model.dart';
 import 'package:moaazapp/services/auth_service.dart';
 
 class LoginController {
-  static Future<bool> login(String email, String password, {bool rememberMe = false}) async {
+  static Future<bool> login(
+    String email,
+    String password, {
+    bool rememberMe = false,
+  }) async {
     try {
       final response = await http.post(
         Uri.parse(BaseUrl.apiLogin),
@@ -23,7 +29,10 @@ class LoginController {
           if (rememberMe) {
             final prefs = AuthService.prefs;
             await prefs.setString('user_email', email);
-            await AuthService.secureStorage.write(key: 'user_password', value: password);
+            await AuthService.secureStorage.write(
+              key: 'user_password',
+              value: password,
+            );
           }
 
           return true;
@@ -31,7 +40,9 @@ class LoginController {
       }
       return false;
     } catch (e) {
-      print('Login error: $e');
+      if (kDebugMode) {
+        print('Login error: $e');
+      }
       return false;
     }
   }

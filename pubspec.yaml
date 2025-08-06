@@ -23,3 +23,14 @@ flutter:
   assets:
     - assets/
     - assets/images_buttons/
+  fonts:
+    - family: Source Sans 3
+      fonts:
+        - asset: assets/fonts/SourceSans3-Regular.ttf
+    - family: Barlow
+      fonts:
+        - asset: assets/fonts/Barlow-Regular.ttf  
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf      
+        

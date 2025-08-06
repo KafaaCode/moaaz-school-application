@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moaazapp/screens/auth/login_screen.dart';
-import 'package:moaazapp/screens/home_screen.dart';
+import 'package:moaazapp/features/home/student/presentation/screens/student_home_screen.dart';
 import 'package:moaazapp/services/auth_service.dart';
 
 void main() async {
@@ -30,7 +29,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: createMaterialColor(const Color(0xFF536B9D)),
         fontFamily: 'Tajawal',
       ),
-      home: isLoggedIn ? const HomeScreen() : const LoginScreen(),
+      // home: isLoggedIn ? const HomeScreen() : const LoginScreen(),
+      home: StudentHomeScreen(),
     );
   }
 
