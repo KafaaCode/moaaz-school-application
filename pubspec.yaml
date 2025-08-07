@@ -33,5 +33,8 @@ flutter:
         - asset: assets/fonts/Barlow-Regular.ttf  
     - family: Roboto
       fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf      
+        - asset: assets/fonts/Roboto-Regular.ttf  
+    - family: Bebas Neue
+      fonts:
+        - asset: assets/fonts/BebasNeue-Regular.ttf            
         

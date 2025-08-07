@@ -12,7 +12,7 @@ Widget buildTeacherCard({
     height: width,
     padding: const EdgeInsets.all(16),
     decoration: BoxDecoration(
-      color: AppColors.blueColor,
+      color: Colors.white,
       borderRadius: BorderRadius.circular(15),
       boxShadow: [
         BoxShadow(
@@ -33,7 +33,7 @@ Widget buildTeacherCard({
             // color: color.withOpacity(0.15),
             borderRadius: BorderRadius.circular(12),
           ),
-          child: Icon(iconPath, color: Colors.white, size: 70),
+          child: Icon(iconPath, color: Colors.orange, size: 70),
         ),
         Spacer(),
         Text(
@@ -41,7 +41,7 @@ Widget buildTeacherCard({
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
-            color: Colors.white,
+            color: AppColors.blueColor,
           ),
         ),
       ],

@@ -28,6 +28,7 @@ class AppConstants {
   static const String sans = 'Source Sans 3';
   static const String barlow = 'Barlow';
   static const String roboto = 'Roboto';
+  static const String bebeNue = 'Bebas Neue';
 
   // ---  images -----
   static const String moazLogo = 'assets/moaaz-logo1 1.png';

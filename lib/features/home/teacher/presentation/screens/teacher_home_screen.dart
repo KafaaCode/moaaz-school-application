@@ -33,7 +33,7 @@ class TeacherHomeScreen extends StatelessWidget {
                     teacherClassYearContainer(year: '2020 - 2021'),
                   ],
                 ),
-                teacherImageContainer(),
+                teacherImageContainer(context),
               ],
             ),
           ),
