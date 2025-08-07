@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:moaazapp/core/constants/app_constants.dart';
 import 'package:moaazapp/core/helper/navigator.dart';
-import 'package:moaazapp/features/degrees/student/presentation/screens/degrees_screen.dart';
-import 'package:moaazapp/features/home/student/presentation/widget/build_card_square.dart';
-import 'package:moaazapp/features/homeWorks/presentation/screens/home_work_screen.dart';
-import 'package:moaazapp/features/payments/presentation/screens/payments_screen.dart';
-import 'package:moaazapp/features/techerNotes/presentation/screens/techer_notes_screen.dart';
+import 'package:moaazapp/features/attendance/teacher/presentation/screens/teacher_add_see_attendance_screen.dart';
+import 'package:moaazapp/features/degrees/teacher/presentation/screens/teacher_add_or_see_degrees_screen.dart';
+import 'package:moaazapp/features/home/teacher/presentation/widgets/build_teacher_card.dart';
 import 'package:moaazapp/screens/auth/login_screen.dart';
 
-class CustomStudentCardsGridview extends StatelessWidget {
-  const CustomStudentCardsGridview({super.key});
+class TeacherCustomCardGridView extends StatelessWidget {
+  const TeacherCustomCardGridView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,25 +21,22 @@ class CustomStudentCardsGridview extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
-                onTap: () {
-                  Nav().push(context, TeacherNotesScreen());
-                },
-                child: buildSquareCard(
-                  title: AppConstants.teacherNotes,
+                onTap: () {},
+                child: buildTeacherCard(
+                  title: 'صور اللوح',
                   width: cardWidth,
                   color: const Color(0xFF536B9D),
-                  iconPath: 'assets/images_buttons/img4.png',
+                  iconPath: Icons.image_aspect_ratio,
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  Nav().push(context, PaymentsScreen());
-                },
-                child: buildSquareCard(
-                  title: AppConstants.financePayments,
+                onTap: () =>
+                    Nav().push(context, TeacherAddSeeAttendanceScreen()),
+                child: buildTeacherCard(
+                  title: 'الحضور',
                   width: cardWidth,
                   color: const Color(0xFF536B9D),
-                  iconPath: 'assets/images_buttons/img3.png',
+                  iconPath: Icons.science,
                 ),
               ),
             ],
@@ -58,24 +52,22 @@ class CustomStudentCardsGridview extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Nav().push(context, DegreesScreen());
+                  Nav().push(context, TeacherAddOrSeeDegreesScreen());
                 },
-                child: buildSquareCard(
-                  title: AppConstants.studentDegrees,
+                child: buildTeacherCard(
+                  title: 'العلامات',
                   width: cardWidth,
                   color: Colors.amber[700]!,
-                  iconPath: 'assets/images_buttons/img1.png',
+                  iconPath: Icons.task,
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  Nav().push(context, HomeWorkScreen());
-                },
-                child: buildSquareCard(
-                  title: AppConstants.myHomeWorks,
+                onTap: () {},
+                child: buildTeacherCard(
+                  title: 'التعميمات',
                   width: cardWidth,
                   color: Colors.green[700]!,
-                  iconPath: 'assets/images_buttons/img2.png',
+                  iconPath: Icons.notes,
                 ),
               ),
             ],
@@ -85,9 +77,8 @@ class CustomStudentCardsGridview extends StatelessWidget {
         const SizedBox(height: 30),
 
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox.shrink(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Center(
@@ -97,11 +88,11 @@ class CustomStudentCardsGridview extends StatelessWidget {
                       MaterialPageRoute(builder: (_) => const LoginScreen()),
                     );
                   },
-                  child: buildSquareCard(
-                    title: 'تسجيل الخروج',
+                  child: buildTeacherCard(
+                    title: 'Logout',
                     width: cardWidth,
                     color: Colors.red,
-                    iconPath: 'assets/images_buttons/img.png',
+                    iconPath: Icons.logout,
                   ),
                 ),
               ),

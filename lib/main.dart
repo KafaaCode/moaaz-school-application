@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moaazapp/features/home/student/presentation/screens/student_home_screen.dart';
+import 'package:moaazapp/features/home/teacher/presentation/screens/teacher_home_screen.dart';
 import 'package:moaazapp/services/auth_service.dart';
 
 void main() async {
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Tajawal',
       ),
       // home: isLoggedIn ? const HomeScreen() : const LoginScreen(),
-      home: StudentHomeScreen(),
+      home: TeacherHomeScreen(),
     );
   }
 

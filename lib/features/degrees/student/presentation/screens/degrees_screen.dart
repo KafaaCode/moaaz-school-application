@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moaazapp/core/constants/app_colors.dart';
 import 'package:moaazapp/core/constants/app_constants.dart';
 import 'package:moaazapp/core/widgets/custom_app_bar.dart';
-import 'package:moaazapp/features/degrees/presentation/widgets/degrees_build.dart';
+import 'package:moaazapp/features/degrees/student/presentation/widgets/degrees_build.dart';
 
 class DegreesScreen extends StatelessWidget {
   const DegreesScreen({super.key});

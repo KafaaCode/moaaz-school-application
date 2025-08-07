@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:moaazapp/features/degrees/presentation/widgets/degree_container.dart';
-import 'package:moaazapp/features/degrees/presentation/widgets/degrees_column_widget.dart';
+import 'package:moaazapp/features/degrees/student/presentation/widgets/degree_container.dart';
+import 'package:moaazapp/features/degrees/student/presentation/widgets/degrees_column_widget.dart';
 
 class DegreesBuild extends StatelessWidget {
   const DegreesBuild({super.key});
